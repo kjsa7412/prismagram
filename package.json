@@ -1,0 +1,24 @@
+{
+  "name": "prismagram",
+  "version": "1.0.0",
+  "description": "Instargram clone with Express + Prisma + React and React Native",
+  "repository": "https://github.com/kjsa7412/prismagram.git",
+  "author": "Kyungjin Sa <48097915+kjsa7412@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "dotenv": "^6.2.0",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "merge-graphql-schemas": "^1.5.8",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}
