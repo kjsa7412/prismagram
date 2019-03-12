@@ -11,11 +11,10 @@ type User {
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
-  loginSecret: String!
+  loginSecret: String
 }
 
-
-type Post{
+type Post {
   id: ID! @unique
   location: String
   caption: String!
@@ -25,18 +24,21 @@ type Post{
   comments: [Comment!]!
 }
 
-type Like{
+type Like {
+  id: ID! @unique
   user: User!
   post: Post!
 }
 
-type Comment{
+type Comment {
+  id: ID! @unique
   text: String!
   user: User!
   post: Post!
 }
 
-type File{
+type File {
+  id: ID! @unique
   url: String!
   post: Post!
 }
@@ -44,10 +46,10 @@ type File{
 type Room {
   id: ID! @unique
   participants: [User!]!
-  message: [Message!]!
+  messages: [Message!]!
 }
 
-type Message{
+type Message {
   id: ID! @unique
   text: String!
   from: User! @relation(name: "From")

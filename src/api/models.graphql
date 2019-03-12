@@ -14,8 +14,7 @@ type User {
   loginSecret: String!
 }
 
-
-type Post{
+type Post {
   id: ID!
   location: String
   caption: String!
@@ -25,18 +24,21 @@ type Post{
   comments: [Comment!]!
 }
 
-type Like{
+type Like {
+  id: ID!
   user: User!
   post: Post!
 }
 
-type Comment{
+type Comment {
+  id: ID!
   text: String!
   user: User!
   post: Post!
 }
 
-type File{
+type File {
+  id: ID!
   url: String!
   post: Post!
 }
@@ -44,13 +46,13 @@ type File{
 type Room {
   id: ID!
   participants: [User!]!
-  message: [Message!]!
+  messages: [Message!]!
 }
 
-type Message{
+type Message {
   id: ID!
   text: String!
-  from: User! 
+  from: User!
   to: User!
   room: Room!
 }
